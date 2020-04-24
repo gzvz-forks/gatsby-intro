@@ -23,12 +23,14 @@ const Layout = ({ children }) => (
             Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
           font-size: 18px;
           line-height: 1.4;
+
+          > div {
+            margin-top: 0;
+          }
         }
 
         /*remove margin for the main div that gatsby mounts into */
-        > div {
-          margin-top: 0;
-        }
+
         h1,
         h2,
         h3,
@@ -37,11 +39,12 @@ const Layout = ({ children }) => (
         h6 {
           color: #222;
           line-height: 1.1;
+
+          + * {
+            margin-top: 0.5rem;
+          }
         }
 
-        + * {
-          margin-top: 0.5rem;
-        }
         strong {
           color: #222;
         }
